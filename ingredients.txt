@@ -1,1 +1,4 @@
-temp
+#Sorted file dat=file.name
+x = tapply(dat$percent, dat$phyla, function(x) max(x))
+x = sort(x, TRUE)
+dat$phlya = factor(as.character(dat$phyla), levels = names(x))
